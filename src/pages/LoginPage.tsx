@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, TextField, Button, Typography, Box, Alert } from '@mui/material';
 import { useAuth } from '../auth';
-// import { AuthProvider, useAuth } from "./auth/AuthContext";
-// import WeatherPage from "./pages/WeatherPage";
-// import ProtectedRoute from "./auth/ProtectedRoute";
-// import './styles.css';
 
 const LoginPage: React.FC = () => {
 	const [username, setUsername] = useState('');
@@ -48,12 +44,6 @@ const LoginPage: React.FC = () => {
 				</Button>
 			</Box>
 		</Container>
-		// <div className="login-container">
-		//   <h2>Вход</h2>
-		//   <input type="text" placeholder="Логин" value={username} onChange={(e) => setUsername(e.target.value)} />
-		//   <input type="password" placeholder="Пароль" value={password} onChange={(e) => setPassword(e.target.value)} />
-		//   <button onClick={handleLogin}>Войти</button>
-		// </div>
 	);
 };
 

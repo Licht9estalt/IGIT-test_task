@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-// import { BrowserRouter as Router, Route, Routes, Navigate, useNavigate } from "react-router-dom";
-// import WeatherPage from "./pages/WeatherPage";
-// import './styles.css';
 import AuthContext from './AuthContext';
 
 const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

@@ -1,11 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './auth';
-import WeatherPage from './pages/WeatherPage';
-import LoginPage from './pages/LoginPage';
+import { WeatherPage } from './pages';
+import { LoginPage } from './pages';
 import { CssBaseline } from '@mui/material';
-// import ProtectedRoute from "./auth";
-// import './styles.css';
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 	const { isAuth } = useAuth();

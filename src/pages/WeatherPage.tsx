@@ -14,6 +14,7 @@ import {
 	ComposedChart
 } from 'recharts';
 import { useAuth } from '../auth';
+import { WeatherDataType } from './types';
 
 const calculateMovingAverage = (data: number[], windowSize: number) => {
 	return data
@@ -23,12 +24,6 @@ const calculateMovingAverage = (data: number[], windowSize: number) => {
 			return avg;
 		})
 		.filter((val) => val !== null) as number[];
-};
-
-type WeatherDataType = {
-	temp: number[];
-	humidity: number[];
-	time: string[];
 };
 
 const WeatherPage: React.FC = () => {
@@ -113,8 +108,6 @@ const WeatherPage: React.FC = () => {
 							/>
 							<CartesianGrid strokeDasharray='3 3' />
 							<Line type='monotone' dataKey='temp' stroke='#8884d8' name='Температура' />
-							{/* <Line type='monotone' dataKey='humidity' stroke='#82ca9d' name='Влажность' /> */}
-
 							<Line
 								type='monotone'
 								dataKey='movingAvg'
@@ -156,7 +149,6 @@ const WeatherPage: React.FC = () => {
 								stroke='#469CEB'
 								dot={{ stroke: '#469CEB', strokeWidth: 2 }}
 							/>
-							{/* <Bar dataKey='humidity' fill='#82ca9d' name='Влажность' /> */}
 						</ComposedChart>
 					)}
 				</ResponsiveContainer>
